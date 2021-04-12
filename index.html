@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script src="mos.js">
+</script>
+
+<h2>Intrinsic Value Calculator - DCF model</h2>
+
+<form id="form">
+
+Number of Years: <input type="text" name="noy" id="noy" value=5><br>
+Analyst estimate growth rate (this being positive will ingnore the growth rate calculated by fist and last fcf per share): 
+<input type="text" name="fcfps_fy" id="ae" value="-1"><br>
+FCF per share - first year: <input type="text" name="fcfps_fy" id="fcfps_fy" value="6.5"><br>
+FCF per share - last year: <input type="text" name="fcfps_ly" id="fcfps_ly"value="11.5"><br>
+Growth confidence factor rate: <input type="text" name="gcf" id="gcf" value=0.8><br>
+Discount rate: <input type="text" name="dr" id="dr" value=0.1><br>
+Infinite growth rate: <input type="text" name="igr" id="igr" value=0.04><br>
+
+
+</form>
+
+<button onclick="calculateIV()">Calculate intrinsic value - DCF</button><br>
+
+CAGR: <div id="cagr"></div><br>
+
+Present value (DCF value) : <div id="pv"></div><br>
+
+Terminal value: <div id="tv"></div><br>
+
+Terminal present value: <div id="tpv"></div><br>
+
+Intrinsic value: <div id="iv"></div><br>
+
+</body>
+</html>
